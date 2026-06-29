@@ -1,0 +1,16 @@
+Jenkins is an open-source automation server used to build, test, and deploy applications as part of a CI/CD pipeline.
+CI/CD stands for Continuous Integration and Continuous Delivery/Deployment.
+- Continuous Integration (CI): Automatically building and testing code on every commit.
+- Continuous Delivery (CD): Automatically preparing code for release to production.
+- Continuous Deployment: Automatically deploying every change to production.
+Key Jenkins Concepts:
+- Pipeline: A suite of plugins that supports CI/CD workflows defined as code.
+- Jenkinsfile: A text file that defines the Jenkins pipeline using Groovy DSL.
+- Stage: A block that defines a distinct step in the pipeline (Build, Test, Deploy).
+- Agent: The machine where the pipeline runs.
+- Build Trigger: Events that start a pipeline (GitHub webhook, scheduled, manual).
+- Artifact: Output file produced by the build (JAR, Docker image, binary).
+- Plugin: Extensions that add functionality to Jenkins.
+Jenkins integrates with GitHub via webhooks. When code is pushed, GitHub notifies Jenkins to trigger a new build automatically.
+SonarQube integration in Jenkins performs static code analysis to detect bugs, vulnerabilities, and code smells. Add a SonarQube scanner step in the pipeline.
+A Jenkinsfile defines stages like Clone, Build, Test, Push and Deploy in a declarative pipeline syntax using Groovy DSL.

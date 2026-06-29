@@ -1,0 +1,21 @@
+Docker is a platform for developing, shipping, and running applications in containers.
+A container is a lightweight, standalone, executable package that includes everything needed to run an application: code, runtime, system tools, libraries, and settings.
+Key Docker Concepts:
+- Dockerfile: A text file with instructions to build a Docker image.
+- Docker Image: A read-only template used to create containers.
+- Docker Container: A running instance of a Docker image.
+- Docker Hub: A cloud registry to store and share Docker images.
+- Docker Compose: A tool to define and run multi-container Docker applications using a YAML file.
+Common Docker Commands:
+- docker build -t image-name . → Build an image from a Dockerfile
+- docker run -d -p 8080:80 image-name → Run a container in detached mode
+- docker ps → List running containers
+- docker stop container-id → Stop a running container
+- docker push image-name → Push image to Docker Hub
+- docker pull image-name → Pull image from Docker Hub
+- docker exec -it container-id bash → Enter a running container
+- docker logs container-id → View container logs
+- docker-compose up -d → Start services defined in docker-compose.yml
+- docker-compose down → Stop and remove containers
+Docker networking allows containers to communicate. The default bridge network connects containers on the same host. Custom networks provide better isolation.
+Docker volumes persist data beyond container lifecycle. Use -v flag to mount volumes.

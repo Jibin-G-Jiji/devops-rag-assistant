@@ -1,0 +1,35 @@
+Kubernetes (K8s) is an open-source container orchestration platform that automates deploying, scaling, and managing containerized applications.
+Key Kubernetes Concepts:
+- Pod: The smallest deployable unit in Kubernetes. A pod runs one or more containers.
+- Node: A worker machine (VM or physical) that runs pods.
+- Cluster: A set of nodes managed by Kubernetes.
+- Deployment: Manages a set of identical pods and ensures the desired number are running.
+- Service: Exposes a set of pods as a network service.
+- Namespace: Virtual cluster within a Kubernetes cluster for resource isolation.
+- ConfigMap: Stores non-sensitive configuration data as key-value pairs.
+- Secret: Stores sensitive data like passwords and API keys (base64 encoded).
+- Ingress: Manages external HTTP/HTTPS access to services.
+- PersistentVolume: Storage resource in the cluster that persists beyond pod lifecycle.
+Common kubectl Commands:
+- kubectl get pods → List all pods
+- kubectl get nodes → List all nodes
+- kubectl apply -f manifest.yaml → Apply a configuration file
+- kubectl delete -f manifest.yaml → Delete resources from a file
+- kubectl describe pod pod-name → Show detailed info about a pod
+- kubectl logs pod-name → View pod logs
+- kubectl exec -it pod-name -- bash → Enter a running pod
+- kubectl scale deployment name --replicas=3 → Scale a deployment
+- kubectl get services → List all services
+- kubectl get deployments → List all deployments
+Kubernetes Service Example:
+apiVersion: v1
+kind: Service
+metadata:
+  name: my-app-service
+spec:
+  selector:
+    app: my-app
+  ports:
+  - port: 80
+    targetPort: 8080
+  type: LoadBalancer

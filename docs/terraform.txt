@@ -1,0 +1,18 @@
+Terraform is an open-source Infrastructure as Code (IaC) tool by HashiCorp that lets you define and provision cloud infrastructure using declarative configuration files.
+Key Terraform Concepts:
+- Provider: Plugin that interacts with cloud APIs (AWS, Azure, GCP).
+- Resource: Infrastructure component to create (EC2 instance, S3 bucket, VPC).
+- State: Terraform tracks real infrastructure in a state file (terraform.tfstate).
+- Module: Reusable group of Terraform resources.
+- Variables: Input parameters to make configurations reusable.
+- Outputs: Values returned after applying configuration.
+- Plan: Preview of changes Terraform will make.
+- Apply: Execute the planned infrastructure changes.
+Terraform Workflow:
+1. terraform init → Initialize the working directory and download providers
+2. terraform plan → Preview what changes will be made
+3. terraform apply → Create or update infrastructure
+4. terraform destroy → Tear down all managed infrastructure
+Terraform state should be stored remotely using S3 backend for team collaboration.
+Variables in Terraform are defined in variables.tf and passed via terraform.tfvars file.
+Terraform providers are downloaded during init and locked in .terraform.lock.hcl file.

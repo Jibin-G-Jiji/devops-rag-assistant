@@ -1,0 +1,18 @@
+ArgoCD is a declarative GitOps continuous delivery tool for Kubernetes.
+GitOps is a practice where Git is the single source of truth for infrastructure and application configuration.
+All changes are made via Git commits and automatically synced to the cluster.
+Key ArgoCD Concepts:
+- Application: An ArgoCD resource that maps a Git repo to a Kubernetes cluster.
+- Sync: The process of making the cluster match the desired state in Git.
+- Drift: When the live cluster state differs from what is defined in Git.
+- Auto-sync: ArgoCD automatically applies changes when Git repo is updated.
+- Rollback: Revert to a previous Git commit to undo a bad deployment.
+- Health Status: ArgoCD checks if deployed resources are healthy and running.
+Common ArgoCD Commands:
+- argocd app list → List all applications
+- argocd app sync my-app → Manually sync an application
+- argocd app get my-app → Get details of an application
+- argocd app rollback my-app → Rollback to previous version
+- argocd login → Login to ArgoCD server
+ArgoCD uses a pull-based model unlike traditional push-based CD tools.
+ArgoCD workflow: Developer pushes code then CI pipeline builds Docker image then ArgoCD detects change then syncs new version to Kubernetes cluster.
