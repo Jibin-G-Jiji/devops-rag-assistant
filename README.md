@@ -58,6 +58,27 @@ streamlit run app.py
 
 ## 📁 Project Structure
 ## 👨‍💻 Author
+devops-rag-assistant/
+
+├── app.py              # Streamlit web UI
+
+├── rag_pipeline.py     # RAG pipeline (indexing + retrieval)
+
+├── docs/               # DevOps knowledge base documents
+
+│   ├── docker.txt
+
+│   ├── kubernetes.txt
+
+│   ├── jenkins.txt
+
+│   ├── terraform.txt
+
+│   └── argocd.txt
+
+├── requirements.txt
+
+└── README.md
 
 **Jibin G Jiji** — DevOps Engineer  
 🌐 [jibindevops.in](https://jibindevops.in) | 💻 [GitHub](https://github.com/Jibin-G-Jiji)
